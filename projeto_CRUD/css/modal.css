@@ -1,0 +1,12 @@
+.modal-header{
+    background-color:blueviolet;
+    color: white;
+    margin: 0px;
+}
+.modal-header .close{
+    color: white;
+}
+.modal-header .close:hover{
+    background-color: red;
+    padding-bottom: 21.5px;
+}
