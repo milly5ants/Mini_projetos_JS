@@ -22,6 +22,7 @@ function adicionarCliente() {
         `;
         document.querySelector('table>tbody').appendChild(newRow);
     }
+    limparCampos()
 }
 
 function excluirCliente(index) {
@@ -29,3 +30,10 @@ function excluirCliente(index) {
     excluirRegistroCliente.remove();
 }
 
+
+function limparCampos() {
+    document.getElementById('nomeCliente').value = '';
+    document.getElementById('emailCliente').value = '';
+    document.getElementById('telefoneCliente').value = '';
+    document.getElementById('cidadeCliente').value = '';
+}
