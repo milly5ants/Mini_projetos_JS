@@ -16,8 +16,8 @@ function adicionarCliente() {
             <td>${cliente.celular}</td>
             <td>${cliente.cidade}</td>
             <td>
-                <button type="button" id="editar-${index}" onclick="editarCliente(${index})">Editar</button>
-                <button type="button" id="deletar-${index}" onclick="excluirCliente(${index})">Excluir</button>
+                <button type="button" class="botaoEditar" id="editar-${index}" onclick="editarCliente(${index})" >Editar</button>
+                <button type="button" class="botaoDeletar" id="deletar-${index}" onclick="excluirCliente(${index})">Excluir</button>
             </td>
         `;
         document.querySelector('table>tbody').appendChild(newRow);
