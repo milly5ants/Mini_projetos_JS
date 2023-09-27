@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu signo</title>
+</head>
+<body>
+
+    <button onclick="dataNascimento()">Clique Aqui</button>
+
+</body>
+
+<script>
+    function dataNascimento (){
+     let dataNascimento = (window.prompt('Digite sua data de Nascimento: '));
+     const limitesSignos = [
+        { nome: 'CAPRICÓRNIO', inicio: new Date(2002, 0, 20), fim: new Date(2002, 0, 31) },
+        { nome: 'AQUÁRIO', inicio: new Date(2002, 1, 1), fim: new Date(2002, 1, 18) },
+        { nome: 'PEIXES', inicio: new Date(2002, 1, 19), fim: new Date(2002, 2, 20) },
+        // Continuar com os outros signos e intervalos de datas
+     ];
+     
+     const dataDividida = dataNascimento.split('/');
+     const dia = parseInt(dataDividida[0], 10);
+     const mes = parseInt(dataDividida[1], 10) - 1; // Ajuste o índice do mês para 0-based
+     const ano = parseInt(dataDividida[2], 10); // Adicionei a captura do ano
+
+     function getSigno(){
+        for (const signo of limitesSignos) {
+          if (ano === signo.inicio.getFullYear() && mes === signo.inicio.getMonth() && dia >= signo.inicio.getDate() && mes === signo.fim.getMonth() && dia <= signo.fim.getDate()) {
+            return signo.nome;
+          }
+        }
+
+        return 'Signo não encontrado';
+     }
+
+     const resultado = getSigno(dia, mes, ano);
+     console.log(`Seu signo é: ${resultado}`);
+    }
+    dataNascimento();
+</script>
+
+
+
+</html>
