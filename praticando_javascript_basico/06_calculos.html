@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizando Cálculos</title>
+</head>
+<body>
+    <button onclick="iniciar()">Clique para Iniciar</button>
+    <h3 id="resultado"> Aqui vem os resultados...</h3>
+</body>
+<script>
+    function iniciar() {
+        var numero1 = prompt("Digite um número inteiro:")
+
+        var numero2 = prompt("Digite outro número inteiro:")
+
+        const resultadoFinal = document.getElementById("resultado")   
+
+        let soma = parseInt(numero1) + parseInt(numero2)
+        let subtracao = parseInt(numero1) - parseInt(numero2)
+        let multiplicacao = parseInt(numero1) * parseInt(numero2)
+        let divisao = parseInt(numero1) / parseInt(numero2)
+        
+    resultadoFinal.innerHTML = ` <ul>
+                                <li> ${numero1} + ${numero2} = ${soma} <br> </li>
+                                <li> ${numero1} - ${numero2} = ${subtracao} <br> </li>
+                                <li> ${numero1} x ${numero2} = ${multiplicacao} <br> </li>
+                                <li> ${numero1} / ${numero2} = ${divisao} <br> </li>
+                                </ul>
+                                `
+    }
+</script>
+</html>

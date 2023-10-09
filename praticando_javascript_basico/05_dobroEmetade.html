@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando o dobro e a Metade</title>
+</head>
+<body>
+    <button onclick="calcular()">Clique para começar</button>
+    <h3 id="resultado"> Aqui vem o Resultado</h3>
+</body>
+<script>
+    function calcular () {
+        var numero = prompt("Digite um número:")
+        let metade = numero / 2
+        let dobro = numero * 2 
+        const dobroMetade = document.getElementById("resultado")
+
+        dobroMetade.innerHTML = `A metade de ${numero} é ${metade} e o dobro é ${dobro}!`
+    }
+</script>
+</html>

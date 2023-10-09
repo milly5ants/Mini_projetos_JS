@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com HTML</title>
+</head>
+<body>
+    <button onclick="inicio()">Clique aqui para começar</button>
+    <h3>Aqui vai aparecer o resultado...</h3>
+</body>
+<script>
+    function inicio(params) {
+        let nome = prompt("Informe seu nome:")
+        const resultado = document.querySelector('h3')
+        resultado.innerHTML = `Olá ${nome}, Seja bem vindo!`
+    }
+    
+</script>
+</html>
